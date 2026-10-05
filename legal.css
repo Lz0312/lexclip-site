@@ -1,0 +1,43 @@
+:root {
+  color-scheme: light dark;
+  --LexclipDesign-paper: #f8f4ec;
+  --LexclipDesign-readingPaper: #f1ede5;
+  --LexclipDesign-ink: #26221e;
+  --LexclipDesign-quiet: #5e554c;
+  --LexclipDesign-rule: rgb(60 50 40 / 16%);
+  --LexclipDesign-bodyFont: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --LexclipDesign-titleFont: ui-serif, "New York", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --LexclipDesign-paper: #2a2723;
+    --LexclipDesign-readingPaper: #191714;
+    --LexclipDesign-ink: #eae6de;
+    --LexclipDesign-quiet: #b4aca1;
+    --LexclipDesign-rule: rgb(245 242 235 / 10%);
+  }
+}
+* { box-sizing: border-box; }
+html { font-family: var(--LexclipDesign-bodyFont); line-height: 1.8; background: var(--LexclipDesign-readingPaper); color: var(--LexclipDesign-ink); }
+body { margin: 0; }
+a { color: inherit; text-underline-offset: .3em; overflow-wrap: anywhere; }
+a:focus-visible { outline: 2px solid var(--LexclipDesign-ink); outline-offset: 4px; }
+header, main, footer { width: min(100%, 45rem); margin-inline: auto; padding: 1.5rem; }
+header { padding-block: 2rem 1rem; }
+.brand { display: inline-flex; align-items: baseline; gap: .75rem; font: 1.5rem var(--LexclipDesign-titleFont); text-decoration: none; min-height: 44px; }
+.brand span { font-size: 1rem; font-style: italic; color: var(--LexclipDesign-quiet); }
+nav { display: flex; gap: .5rem 1.5rem; flex-wrap: wrap; margin-top: 1rem; }
+nav a, footer a, .contact { display: inline-flex; align-items: center; min-height: 44px; }
+nav a[aria-current] { font-weight: 600; }
+main { background: var(--LexclipDesign-paper); padding-block: 2.5rem 3rem; }
+h1, h2 { font-family: var(--LexclipDesign-titleFont); line-height: 1.5; overflow-wrap: anywhere; }
+h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); margin: .5rem 0; }
+h2 { font-size: 1.25rem; margin: 0 0 1rem; }
+p { margin: 0 0 1rem; overflow-wrap: anywhere; }
+.meta, .eyebrow, footer { color: var(--LexclipDesign-quiet); font-size: .875rem; }
+.intro { margin-top: 1.5rem; }
+section { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--LexclipDesign-rule); }
+footer a { margin-right: 1.5rem; }
+.skip { position: absolute; left: 1rem; top: -10rem; padding: .5rem 1rem; background: var(--LexclipDesign-paper); }
+.skip:focus { top: 1rem; }
+@media (min-width: 48rem) { header, main, footer { padding-inline: 3rem; } }
