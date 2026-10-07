@@ -1,23 +1,432 @@
 <!doctype html>
 <html lang="zh-Hans">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<meta name="description" content="遇到问题可以直接告诉开发者王立志。支持邮箱：wlz060312@outlook.com。测试期间也可以通过 TestFlight 发送反馈。">
-<title>联系与支持 · 摘词本</title>
-<link rel="stylesheet" href="/lexclip-site/legal.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#E2DBCF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#100F0D" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="摘词本 Lexclip：看见英文就摘下来，带着照片和贴纸慢慢学会。">
+  <title>摘词本 · Lexclip</title>
+  <link rel="icon" type="image/png" href="assets/app-icon.png">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip" href="#content">跳到正文</a>
-<header><a class="brand" href="/lexclip-site/">摘词本 <span lang="en">Lexclip</span></a><nav aria-label="说明与支持"><a href="/lexclip-site/privacy/">隐私政策</a><a href="/lexclip-site/terms/">用户协议与服务条款</a><a href="/lexclip-site/support/" aria-current="page">联系与支持</a></nav></header>
-<main id="content">
-<p class="eyebrow">随手摘下，慢慢学会。</p>
-<h1>联系与支持</h1>
-<p class="meta">更新于 <time datetime="2026-10-07">2026-10-07</time> · 王立志</p>
-<p class="intro">遇到问题可以直接告诉开发者王立志。支持邮箱：wlz060312@outlook.com。测试期间也可以通过 TestFlight 发送反馈。</p>
-<p><a class="contact" href="mailto:wlz060312@outlook.com">发送邮件至 wlz060312@outlook.com ↗</a></p><section aria-labelledby="section-0"><h2 id="section-0">通过邮件联系</h2><p>发送邮件至 wlz060312@outlook.com。登录失败、账户删除、隐私请求和一般使用问题都可以通过这个邮箱联系开发者。</p><p>邮箱以后如有调整，会同步更新 官网支持页和 App 内链接。此邮箱用于支持反馈，不是测试者的登录账户。</p></section><section aria-labelledby="section-1"><h2 id="section-1">通过 TestFlight 联系</h2><p>打开 TestFlight → 选择「摘词本」→「发送 Beta 版反馈」。也可以在 App 中截图，点开截图后选择共享 Beta 版反馈。你可以只描述问题，不必附上来源照片。</p><p>账户或隐私问题也可以发送邮件至 wlz060312@outlook.com，主题写「账户支持」或「隐私请求」。请说明登录方式和遇到的问题，开发者会通过你提供的回复邮箱跟进。</p></section><section aria-labelledby="section-2"><h2 id="section-2">反馈中可以写什么</h2><p>请说明你当时做了什么、预期看到什么、实际发生什么，以及能否再次出现。附上 App 版本与 Build、设备型号和 iOS 版本，会更容易查出原因。</p><p>发送截图前请遮盖私人文字、人物和账号信息。不要发送密码、短信验证码、Apple 凭证或其他登录令牌。</p></section><section aria-labelledby="section-3"><h2 id="section-3">AI 没有结果</h2><p>先检查「设置 → 关于摘词本 → 云端 AI 与数据」是否允许云端 AI，以及账户是否有对应功能和剩余额度。联网后可回到详情页重试。本机词典和 OCR 不需要开启云端 AI。</p></section><section aria-labelledby="section-4"><h2 id="section-4">同步或照片问题</h2><p>先保留 App 与当前账户，不要通过退出登录或卸载来尝试修复同步问题。退出登录会清除本机账户数据；未同步的内容和来源照片可能无法恢复。</p><p>来源照片普通删除后，可在「完整摘词历史 → 最近删除」中于 7 天内恢复。已清理或因退出登录移除的原图不能通过云端词本恢复。</p></section><section aria-labelledby="section-5"><h2 id="section-5">账户与隐私请求</h2><p>「注销账户」入口在「设置 → 账户」中的「登录与注销」栏目。申请后有 3 天冷静期，期间重新登录同一账户会自动撤销注销。无法登录或申请注销没有成功时，请发送邮件至 wlz060312@outlook.com，或通过 TestFlight 反馈描述原因并注明账户登录方式，不要发送密码或验证码。隐私政策说明了数据种类、用途和删除范围。</p></section><section aria-labelledby="section-6"><h2 id="section-6">阅读法律页面</h2><p>App 中的隐私政策、用户协议与联系支持会在系统 Safari 浏览窗口中打开官网，不再显示本地法律正文。首次阅读需要网络；无法加载时请检查网络后重试，也可以在 Safari 中打开官网。</p></section>
-</main>
-<footer>摘词本 · TestFlight 测试阶段<br><a href="/lexclip-site/privacy/">隐私政策</a><a href="/lexclip-site/terms/">服务条款</a><a href="/lexclip-site/support/">联系与支持</a></footer>
+  <a class="skip" href="#main">跳到正文</a>
+  <div class="scroll-progress" aria-hidden="true"><i></i></div>
+
+  <main id="main">
+    <!-- 1 · Hero -->
+    <section class="hero" data-reveal>
+      <div class="desk-grain" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="brand-mark">
+          <img src="assets/app-icon.png" width="64" height="64" alt="">
+          <span class="brand-name">摘词本</span>
+          <span class="brand-en" lang="en">Lexclip</span>
+        </p>
+        <h1>
+          看见英文，<br>
+          <span class="mark-line" data-mark>点一下就摘下来</span>
+        </h1>
+        <p class="lede">
+          不用打开词典再打字。拍张照、截个屏，点一下照片里的词就行。词会带着当时的照片、句子和贴纸，留在你自己的本子里。
+        </p>
+        <p class="hero-hint" aria-hidden="true">往下滑动就能看完</p>
+      </div>
+
+      <div class="hero-stage">
+        <figure class="phone media-slot has-hero-video" data-media="hero">
+          <video
+            class="shot-video hero-video"
+            src="assets/clips/hero.mp4"
+            muted
+            playsinline
+            autoplay
+            loop
+            preload="auto"
+            aria-label="摘词本使用演示"
+          ></video>
+          <div class="phone-fallback" aria-hidden="true">
+            <div class="phone-bezel">
+              <div class="phone-screen">
+                <div class="status-bar"><span>9:41</span><span class="pill"></span><span>■■■</span></div>
+                <header class="app-header">
+                  <h2>摘词</h2>
+                  <span class="more-dot">···</span>
+                </header>
+                <div class="journal-page">
+                  <div class="washi"></div>
+                  <div class="day-head">
+                    <span class="day-num">7</span>
+                    <div>
+                      <p class="day-label">Today</p>
+                      <p class="day-meta">October · 3 words</p>
+                    </div>
+                  </div>
+                  <article class="journal-row">
+                    <div class="sticker s1"></div>
+                    <div>
+                      <p class="word mark-word">espresso</p>
+                      <p class="sense">浓缩咖啡</p>
+                    </div>
+                  </article>
+                  <article class="journal-row">
+                    <div class="sticker s2"></div>
+                    <div>
+                      <p class="word mark-word">terrace</p>
+                      <p class="sense">露台</p>
+                    </div>
+                  </article>
+                  <article class="journal-row">
+                    <div class="sticker s3 empty"></div>
+                    <div>
+                      <p class="word mark-word">quietly</p>
+                      <p class="sense">安静地</p>
+                    </div>
+                  </article>
+                </div>
+                <nav class="tab-bar">
+                  <span class="tab on">摘词</span>
+                  <span class="tab">复习</span>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 2 · 效率 -->
+    <section class="spread claim" data-reveal>
+      <div class="spread-inner paper-sheet">
+        <p class="section-kicker"><span lang="en">Speed</span><span>为什么快</span></p>
+        <h2>查一个词，别再绕那么多弯</h2>
+        <p class="body">
+          以前大概是：截图，打开词典，一个字母一个字母敲，再选意思，还要想怎么背。摘词本把中间几步砍掉——字在手机上就认完了，你直接点照片里的词；东西可以抠成贴纸；保存后词会飞回日记。不是功能堆得更多，是从「看见」到「留下」更短。
+        </p>
+        <ul class="stat-rail" role="list">
+          <li>
+            <span class="stat-num">0</span>
+            <span class="stat-unit">次打字</span>
+            <span class="stat-note">点照片里的词就能查、能存，不用手敲拼写</span>
+          </li>
+          <li>
+            <span class="stat-num">本机</span>
+            <span class="stat-unit">先认完字</span>
+            <span class="stat-note">文字和物体一起在本机分析，原图先留在手机里</span>
+          </li>
+          <li>
+            <span class="stat-num">2</span>
+            <span class="stat-unit">个 Tab</span>
+            <span class="stat-note">就「摘词」和「复习」，不想让你到处找入口</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3 · 闭环：滚动 scrub 视频 -->
+    <section class="loop-pin" id="loop">
+      <div class="loop-sticky">
+        <div class="loop-stage">
+          <p class="section-kicker"><span lang="en">Loop</span><span>一条闭环</span></p>
+          <p class="loop-chain" aria-hidden="true">
+            <span data-chain="0">看见</span>
+            <i>→</i>
+            <span data-chain="1">摘下</span>
+            <i>→</i>
+            <span data-chain="2">点一下</span>
+            <i>→</i>
+            <span data-chain="3">留下来</span>
+            <i>→</i>
+            <span data-chain="4">学会</span>
+          </p>
+          <div class="loop-hero-line">
+            <span class="loop-big" data-loop-title>看见</span>
+            <span class="loop-mark-bar" data-loop-bar></span>
+          </div>
+          <p class="loop-copy" data-loop-copy>菜单、路牌、字幕、包装、书页——外面碰到的英文，都可以摘。</p>
+          <ol class="loop-dots" data-loop aria-label="使用步骤">
+            <li class="loop-step is-active" data-step="0" data-time="0" data-title="看见" data-copy="菜单、路牌、字幕、包装、书页——外面碰到的英文，都可以摘。"></li>
+            <li class="loop-step" data-step="1" data-time="2.6" data-title="摘下" data-copy="首页往下拉就能开相机，也能用 Action Button 截屏、相机控制键，或者从相册选一张。原图先存好，再一起认字、认物体。"></li>
+            <li class="loop-step" data-step="2" data-time="4" data-title="点一下" data-copy="在照片上点词看意思，点物体看贴纸。想整张读懂时，再点「拆词」。"></li>
+            <li class="loop-step" data-step="3" data-time="5.8" data-title="留下来" data-copy="词本按天长成一本日记。每个词都带着当时的照片、句子和贴纸，不是干巴巴的词表。"></li>
+            <li class="loop-step" data-step="4" data-time="end" data-title="学会" data-copy="复习是四选一翻卡，间隔按 1、2、4、7、15、30 天往后排。记得了就往前走，忘了就退两级，明天再来。"></li>
+          </ol>
+          <p class="loop-hint">继续往下划，视频会跟着走</p>
+        </div>
+        <figure class="loop-scene has-loop-video" data-loop-scene>
+          <video
+            class="loop-video"
+            src="assets/clips/loop.mp4"
+            muted
+            playsinline
+            preload="auto"
+            aria-label="看见、摘下、点一下、留下来、学会"
+          ></video>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 4 · 入口 -->
+    <section class="spread entries" data-reveal>
+      <div class="spread-inner">
+        <p class="section-kicker"><span lang="en">Entries</span><span>从哪开始摘</span></p>
+        <h2>不一定非要点开 App 图标</h2>
+        <p class="body">
+          读到一半可以按 Action Button；锁屏侧边有相机控制；控制中心也能一键打开相机；相册里已有的截图也能丢进来。首页继续往下拉，相机就像抽屉一样被拉出来——不是盖一层浮窗。
+        </p>
+        <div class="entry-flow">
+          <article class="entry-row" data-reveal>
+            <span class="entry-glyph" aria-hidden="true">◎</span>
+            <div>
+              <h3>下拉开相机</h3>
+              <p>在摘词首页再往下拉一点，松手就打开。拍照、选相册都在这块暗房里完成；拍完直接进互动照片。</p>
+            </div>
+          </article>
+          <article class="entry-row" data-reveal>
+            <span class="entry-glyph" aria-hidden="true">⌘</span>
+            <div>
+              <h3>Action Button · 轻点背面</h3>
+              <p>绑好截屏快捷指令后，正在看的内容会进本机收件箱，打开 App 就是互动照片。字幕、网页、电子书都挺合适。</p>
+            </div>
+          </article>
+          <article class="entry-row" data-reveal>
+            <span class="entry-glyph" aria-hidden="true">◉</span>
+            <div>
+              <h3>相机控制 · 锁屏 · 控制中心</h3>
+              <p>从系统这边进来，一打开就是相机展开的样子，少绕几步，尽快到快门。</p>
+            </div>
+          </article>
+          <article class="entry-row" data-reveal>
+            <span class="entry-glyph" aria-hidden="true">▢</span>
+            <div>
+              <h3>从相册导入</h3>
+              <p>用系统相册选一张就行，App 不会去翻你整本相册。路牌、菜单、包装事后整理也方便。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · 本机识别 -->
+    <section class="darkroom" data-reveal>
+      <div class="darkroom-inner">
+        <p class="section-kicker light"><span lang="en">On device</span><span>先在手机上认完</span></p>
+        <h2>字和物体，在本机一起处理</h2>
+        <p class="body light">
+          原图先存到本机，再同时认字、认前景。互动照片不是新开一页，就叠在取景窗里：词上有淡淡荧光笔底，点得着；物体平时只有细轮廓，点中了才抠出来。万一没认好，照片还在，可以就地再试一次。
+        </p>
+        <div class="photo-demo">
+          <div class="photo-frame sticker-stage" data-scan>
+            <div class="photo-scene">
+              <div class="mug-sticker" aria-hidden="true">
+                <img src="assets/shots/sticker-mug.png" alt="" width="640" height="640">
+                <div class="mug-label">
+                  <span lang="en">mug</span>
+                  <span>马克杯</span>
+                </div>
+              </div>
+            </div>
+            <div class="scan-bar"></div>
+            <div class="photo-glow"></div>
+          </div>
+          <div class="invite-cap">
+            <span class="cap-glow"></span>
+            <span>拆词</span>
+          </div>
+          <div class="tyndall" aria-hidden="true"></div>
+        </div>
+        <div class="detail-grid">
+          <article>
+            <h3>点词</h3>
+            <p>打开详情看音标、意思、原句和搭配。主按钮就一个：保存这次语境。存好后，词会带着贴纸飞向「摘词」。</p>
+          </article>
+          <article>
+            <h3>点物体</h3>
+            <p>贴纸都是从你原图抠的，不会拿生成图凑数。名字可以选，也可以自己改，存进日记和分类。</p>
+          </article>
+          <article>
+            <h3>拆词</h3>
+            <p>整张照片收进胶囊，给你按原文排好的词、中英概括，还能接着问。本机认字是底，云端 AI 是可选的加强。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · 语境 -->
+    <section class="spread context" data-reveal>
+      <div class="spread-inner paper-sheet">
+        <p class="section-kicker"><span lang="en">Context</span><span>带着语境记</span></p>
+        <h2>每个词都记得你在哪儿遇见它</h2>
+        <p class="body">
+          这不是一本通用词典，也不是干背单词。特别的地方在于「这次遇见」：来源照片、原句、抠出来的贴纸。同一个词再摘一次，会多一行日记，不会把旧的盖掉。复习翻到背面，看到的还是同一套详情。
+        </p>
+        <figure class="shot-band media-slot is-fallback" data-media="journal">
+          <div class="sticker-deck fallback-overlay" aria-hidden="true">
+            <div class="deck-card c1"><span>cup</span></div>
+            <div class="deck-card c2"><span>saucer</span></div>
+            <div class="deck-card c3"><span>steam</span></div>
+          </div>
+        </figure>
+        <div class="context-points">
+          <p><strong>按天长成日记。</strong>今天那一页会贴条和纸胶带；日期用大号衬线；贴纸左右交替，轻轻歪一点，像贴在本子上。</p>
+          <p><strong>荧光笔只用来标。</strong>标这个词、标当前意思、标已经存过。不当按钮底色，也不整块铺开。</p>
+          <p><strong>出错也能接着弄。</strong>识别、查词、保存或同步没成时，照片和已经选的词还在，页面上会说明下一步。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · AI -->
+    <section class="spread study" data-reveal>
+      <div class="spread-inner">
+        <p class="section-kicker"><span lang="en">Study</span><span>拆词和追问</span></p>
+        <h2>想整张读懂时，再叫 AI 帮看一眼</h2>
+        <p class="body">
+          查单个词、听发音、按日程复习，本机词典就够用。真想搞清「这张图在说什么」、要场景说法或例句时，再点「拆词」才会走云端。结果写在描图纸上的纸条里，不是聊天气泡：左边是 AI 批注，右边是你的问题。推荐问题点一下就流式回答，也可以自己接着问。句子和重点词能存进词本，首页日记会出现整句英文和中文。
+        </p>
+        <figure class="shot-band media-slot is-fallback" data-media="study">
+          <div class="note-stack fallback-overlay" aria-hidden="true">
+            <div class="ed-note ai">
+              <p class="note-label">AI 批注</p>
+              <p>一张露台菜单。seasonal 是当季，espresso 是浓缩，terrace 指户外座位。</p>
+            </div>
+            <div class="ed-note you">
+              <p class="note-label">你的问题</p>
+              <p>点单时怎么礼貌地问有没有靠窗的座位？</p>
+            </div>
+          </div>
+        </figure>
+        <div class="study-facts">
+          <article data-reveal>
+            <h3>不会没事就传原图</h3>
+            <p>只有你主动拆词，或开了对应云端能力并真正用到时，才会按请求发压缩图或文字。本机认字和词典不靠云端 AI。</p>
+          </article>
+          <article data-reveal>
+            <h3>存不存，还是你说了算</h3>
+            <p>AI 不直接写进词本。词和句子校验过后，要你点保存才会留下并同步；分类也只沿用已有的，不会自己乱建。</p>
+          </article>
+          <article data-reveal>
+            <h3>开没开、额度够不够，看得见</h3>
+            <p>登录时可以单独选要不要云端 AI。额度用完或失败，就在当前页说明，还能重试，不会把你踹回起点。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · 复习 -->
+    <section class="spread review" data-reveal>
+      <div class="spread-inner paper-sheet">
+        <p class="section-kicker"><span lang="en">Review</span><span>复习</span></p>
+        <h2>四选一翻卡，按间隔再回来</h2>
+        <p class="body">
+          复习首页有三块：今天该复习几个、日历上哪天练得多、新词 / 记忆中 / 已掌握各多少。开始后是四选一；选对继续，选错或点「不认识」就翻开详情——和日记里点开是同一套。间隔是 1、2、4、7、15、30 天；连着记得够多次就算掌握；忘了退两级，明天再练。想多练一轮可以用练习模式，不写进正式排期。
+        </p>
+        <figure class="shot-band media-slot is-fallback" data-media="review">
+          <div class="flip-stage fallback-overlay" aria-hidden="true">
+            <div class="flip-card" data-flip>
+              <div class="flip-face front">
+                <p class="flip-word mark-word">terrace</p>
+                <ul class="choices">
+                  <li>阳台盆栽</li>
+                  <li class="right">露台；户外用餐处</li>
+                  <li>楼梯转角</li>
+                  <li>窗台垫子</li>
+                </ul>
+              </div>
+              <div class="flip-face back">
+                <p class="flip-word">terrace</p>
+                <p class="flip-def">露台。你在菜单照片里点过它。</p>
+              </div>
+            </div>
+          </div>
+        </figure>
+        <ol class="ladder">
+          <li><span>1</span>天</li>
+          <li><span>2</span>天</li>
+          <li><span>4</span>天</li>
+          <li><span>7</span>天</li>
+          <li><span>15</span>天</li>
+          <li><span>30</span>天</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 9 · 样子 -->
+    <section class="spread craft" data-reveal>
+      <div class="spread-inner">
+        <p class="section-kicker"><span lang="en">Craft</span><span>长什么样</span></p>
+        <h2>整本 App 就像一本会变厚的手账</h2>
+        <p class="body">
+          不是仪表盘那种界面。暖色纸、纸纹、撕边、荧光笔、铅笔下划线、和纸胶带、描图纸详情——英文和标题用衬线，中文正文用系统字体。一页里通常只有一个实心主按钮。动效也尽量有说法：下拉开相机、词飞向 Tab、贴纸弹出来、复习翻面；开了减弱动态效果就改成清楚的淡入，反馈还在。
+        </p>
+        <div class="swatches" aria-hidden="true">
+          <span class="sw mist"><i></i>桌面</span>
+          <span class="sw paper"><i></i>纸面</span>
+          <span class="sw ink"><i></i>墨色</span>
+          <span class="sw mark"><i></i>荧光笔</span>
+          <span class="sw quiet"><i></i>注释</span>
+        </div>
+        <p class="body quiet-block">
+          荧光笔有五种颜色可选，只改标注色，不改纸和字的阅读关系。深色模式还是同一本手账，只是暗下来；相机那边一直像暗房。
+        </p>
+      </div>
+    </section>
+
+    <!-- 10 · 本机与同步 -->
+    <section class="spread privacy" data-reveal>
+      <div class="spread-inner paper-sheet">
+        <p class="section-kicker"><span lang="en">Keep local</span><span>什么在手机上，什么会同步</span></p>
+        <h2>来源照片只留在你手机里</h2>
+        <p class="body">
+          原图和完整摘词历史不跟着账户上传。存下来的单词、释义、原句、分类、复习进度，还有贴纸抠图，登录后可以进词本同步。云端 AI 是单独勾选的。法律说明和支持页之后再补，这里先把产品边界说清楚。
+        </p>
+        <div class="keep-split">
+          <div>
+            <h3>留在本机</h3>
+            <ul>
+              <li>来源照片原文件</li>
+              <li>完整摘词历史</li>
+              <li>本机文字识别和抠图</li>
+              <li>本机词典和发音</li>
+            </ul>
+          </div>
+          <div>
+            <h3>登录后可同步</h3>
+            <ul>
+              <li>已保存的词和句子</li>
+              <li>释义、原句、分类</li>
+              <li>复习进度和记录</li>
+              <li>贴纸抠图（不是原图）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 · 收束 -->
+    <section class="finale" data-reveal>
+      <div class="finale-inner">
+        <img class="finale-icon" src="assets/app-icon.png" width="96" height="96" alt="">
+        <h2>随手摘下，慢慢学会</h2>
+        <p class="body">
+          适合在现实里老碰到英文的人：菜单、字幕、包装、工作文档。这一页往下滑就能看完主要用法。现在还在 TestFlight 测试；装上之后，从第一次下拉或一次截屏开始就行。
+        </p>
+        <p class="finale-meta">
+          iOS 17 及以上 · 摘词 / 复习两个 Tab · 个人开发者王立志
+        </p>
+        <p class="finale-mail">
+          有问题可以发邮件到
+          <a href="mailto:support@lexclip.top">support@lexclip.top</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer aria-label="法律与支持" style="padding:32px 24px;text-align:center">
+    <a href="privacy/">隐私政策</a> · <a href="terms/">用户协议与服务条款</a> · <a href="support/">联系与支持</a>
+  </footer>
+  <script src="motion.js" type="module"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ html { font-family: var(--LexclipDesign-bodyFont); line-height: 1.8; background:
 body { margin: 0; }
 a { color: inherit; text-underline-offset: .3em; overflow-wrap: anywhere; }
 a:focus-visible { outline: 2px solid var(--LexclipDesign-ink); outline-offset: 4px; }
-header, main, footer { width: min(100%, 45rem); margin-inline: auto; padding: 1.5rem; }
+header, main, footer { width: min(100%, 38.75rem); margin-inline: auto; padding: 1.5rem; }
 header { padding-block: 2rem 1rem; }
 .brand { display: inline-flex; align-items: baseline; gap: .75rem; font: 1.5rem var(--LexclipDesign-titleFont); text-decoration: none; min-height: 44px; }
 .brand span { font-size: 1rem; font-style: italic; color: var(--LexclipDesign-quiet); }
@@ -30,7 +30,7 @@ nav { display: flex; gap: .5rem 1.5rem; flex-wrap: wrap; margin-top: 1rem; }
 nav a, footer a, .contact { display: inline-flex; align-items: center; min-height: 44px; }
 nav a[aria-current] { font-weight: 600; }
 main { background: var(--LexclipDesign-paper); padding-block: 2.5rem 3rem; }
-h1, h2 { font-family: var(--LexclipDesign-titleFont); line-height: 1.5; overflow-wrap: anywhere; }
+h1, h2, h3 { font-family: var(--LexclipDesign-titleFont); line-height: 1.5; overflow-wrap: anywhere; }
 h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); margin: .5rem 0; }
 h2 { font-size: 1.25rem; margin: 0 0 1rem; }
 p { margin: 0 0 1rem; overflow-wrap: anywhere; }
@@ -41,3 +41,39 @@ footer a { margin-right: 1.5rem; }
 .skip { position: absolute; left: 1rem; top: -10rem; padding: .5rem 1rem; background: var(--LexclipDesign-paper); }
 .skip:focus { top: 1rem; }
 @media (min-width: 48rem) { header, main, footer { padding-inline: 3rem; } }
+.eyebrow { font-family: var(--LexclipDesign-titleFont); font-style: italic; }
+.document-title { font-size: clamp(1.8rem, 5vw, 2.4rem); margin: .5rem 0; }
+h3 { font-size: 1.25rem; margin: 0 0 1rem; }
+article { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--LexclipDesign-rule); }
+.overview { display: grid; gap: .5rem; }
+.overview a { padding-block: .5rem; border-bottom: 1px solid var(--LexclipDesign-rule); }
+.document-note { background: var(--LexclipDesign-readingPaper); padding: 1rem; }
+.document-note p { margin: .5rem 0 0; }
+.toc { display: grid; gap: .5rem; margin-block: 1.5rem; }
+.toc a { padding-block: .25rem; }
+.back { display: inline-flex; align-items: center; min-height: 44px; margin-top: 2rem; }
+.table-wrap { margin-block: 1rem; }
+table { border-collapse: collapse; width: 100%; table-layout: fixed; font-size: .9375rem; }
+caption { text-align: left; color: var(--LexclipDesign-quiet); padding-bottom: .75rem; }
+th, td { border: 1px solid var(--LexclipDesign-rule); padding: .5rem; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+th { background: var(--LexclipDesign-readingPaper); }
+ul { padding-inline-start: 1.5rem; }
+li { margin-bottom: .75rem; }
+:target { scroll-margin-top: 1.5rem; }
+.contact { font-family: var(--LexclipDesign-titleFont); }
+@media (max-width: 26rem) {
+  header, main, footer { padding-inline: 1rem; }
+  .table-wrap table, .table-wrap thead, .table-wrap tbody, .table-wrap tr, .table-wrap th, .table-wrap td { display: block; width: 100%; }
+  .table-wrap caption { display: block; }
+  .table-wrap tr { margin-bottom: 1rem; }
+  .table-wrap td, .table-wrap th { border-bottom: 0; }
+  .table-wrap td:last-child, .table-wrap th:last-child { border-bottom: 1px solid var(--LexclipDesign-rule); }
+}
+@media print {
+  header, footer, .skip, .overview, .toc, .back { display: none; }
+  html, main { background: var(--LexclipDesign-paper); }
+  main { width: 100%; padding: 0; }
+  article { break-before: page; border: 0; }
+  h2, h3 { break-after: avoid; }
+  tr, .document-note { break-inside: avoid; }
+}
